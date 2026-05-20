@@ -22,10 +22,21 @@ jobs:
         run: npm install
 
       - name: Run app
-        run: node api.js &
+        run: node api.js > server.log 2>&1 &
 
       - name: Wait for server
-        run: sleep 3
+        run: sleep 5
+
+      - name: Check server logs
+        if: always()
+        run: cat server.log
+
+      - name: Verify server is running
+        run: |
+          if ! pgrep -f "node api.js" > /dev/null; then
+            echo "Server failed to start"
+            exit 1
+          fi
 
       - name: Test API
         run: curl -f http://localhost:3000
