@@ -3,17 +3,20 @@
 
 ## Student Information
 
-- Student name: *Name*
+- Student name: *Brown tamta*
 - Course: ITDI204 Cloud Computing
-- Application: *Name of the application*
+- Application: *web Application sevices*
 
 ## Cloud Deployment
 
 This application is deployed using Render.
 
 ## Repository Structure
-
-*Briefly describe the important files in the repository.*
+The most important ones are:
+package.json (controls the app)
+api.js (runs the app)
+README.md (explains the app)
+.gitignore (keeps repo clean)
 
 ## Branching Strategy
 
@@ -26,4 +29,4 @@ This application is deployed using Render.
 
 | Environment | Branch | Render URL |
 |---|---|---|
-| Production | main | *Add URL here* |
+| Production | main | *https://your-app-url.onrender.com* |
