@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
   res.send('You have well deployed you app: Congrats to you all');
 });
 app.get('/api', (req, res) => {
-  res.sent('You have well deployed you app: Congrats');
+  res.send('You have well deployed you app: Congrats');
 });
 
 const PORT = process.env.PORT || 3000;
