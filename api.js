@@ -9,6 +9,12 @@ app.get('/', (req, res) => {
 app.get('/api', (req, res) => {
   res.send('You have well deployed you app: Congrats');
 });
+app.get('/health', (req, res) => {
+  res.json({
+    status: "ok",
+    environment: process.env.APP_ENV || "local"
+  });
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
